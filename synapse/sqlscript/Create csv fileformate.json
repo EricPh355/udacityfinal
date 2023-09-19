@@ -1,0 +1,17 @@
+{
+	"name": "Create csv fileformate",
+	"properties": {
+		"content": {
+			"query": "-- Use the same file format as used for creating the External Tables during the LOAD step.\nIF NOT EXISTS (SELECT * FROM sys.external_file_formats WHERE name = 'SynapseDelimitedTextFormat') \n    CREATE EXTERNAL FILE FORMAT [SynapseDelimitedTextFormat] \n    WITH ( FORMAT_TYPE = DELIMITEDTEXT ,\n           FORMAT_OPTIONS (\n             FIELD_TERMINATOR = ',',\n             USE_TYPE_DEFAULT = FALSE\n            ))\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "syndatalake",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
