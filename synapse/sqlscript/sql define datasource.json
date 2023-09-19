@@ -2,12 +2,12 @@
 	"name": "sql define datasource",
 	"properties": {
 		"content": {
-			"query": "-- Storage path where the result set will persist\nIF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'mydlsfs20230413_mydls20230413_dfs_core_windows_net') \n    CREATE EXTERNAL DATA SOURCE [mydlsfs20230413_mydls20230413_dfs_core_windows_net] \n    WITH (\n        LOCATION = 'abfss://mydlsfs20230413@mydls20230413.dfs.core.windows.net' \n    )\nGO",
+			"query": "-- Storage path where the result set will persist\nIF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'adlsnycpayroll-eric-p_adlsnycpayroll-eric-p_dfs_core_windows_net') \n    CREATE EXTERNAL DATA SOURCE [adlsnycpayroll-eric-p_adlsnycpayroll-eric-p_dfs_core_windows_net] \n    WITH (\n        LOCATION = 'abfss://adlsnycpayroll-eric-p@adlsnycpayroll-eric-p.dfs.core.windows.net' \n    )\nGO",
 			"metadata": {
 				"language": "sql"
 			},
 			"currentConnection": {
-				"databaseName": "default",
+				"databaseName": "stations",
 				"poolName": "Built-in"
 			},
 			"resultLimit": 5000
