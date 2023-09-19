@@ -1,0 +1,17 @@
+{
+	"name": "create salesorderheader",
+	"properties": {
+		"content": {
+			"query": "drop table SalesOrderHeader\nGO\nCREATE TABLE SalesOrderHeader( \n   \t[SalesOrderID] [int] NOT NULL,\n\t[RevisionNumber] [tinyint] NOT NULL,\n\t[OrderDate] [datetime] NOT NULL,\n\t[DueDate] [datetime] NOT NULL,\n\t[ShipDate] [datetime] NULL,\n\t[Status] [tinyint] NOT NULL,\n\t[OnlineOrderFlag] BIT NOT NULL,\n[SalesOrderNumber] nvarchar(25) not null, \n[PurchaseOrderNumber] nvarchar(25) NULL, \n[AccountNumber] nvarchar(15) NULL,\n [CustomerID] [int] NOT NULL,\n  [ShipToAddressID] [int] NULL,\n [BillToAddressID] [int] NULL,\n  [ShipMethod] nvarchar(50) NOT NULL, \n  [CreditCardApprovalCode] varchar(15) NULL,\n  [SubTotal] [money] NOT NULL, \n  [TaxAmt] [money] NOT NULL, \n  [Freight] [money] NOT NULL, \n  [TotalDue] [money] NULL, \n  [Comment] nvarchar(4000) NULL, \n  [rowguid] [uniqueidentifier] NOT NULL,\n   [ModifiedDate] [datetime] NOT NULL )\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "syndedsqlpool",
+				"poolName": "syndedsqlpool"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
