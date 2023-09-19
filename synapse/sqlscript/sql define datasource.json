@@ -7,7 +7,7 @@
 				"language": "sql"
 			},
 			"currentConnection": {
-				"databaseName": "syndatalake",
+				"databaseName": "default",
 				"poolName": "Built-in"
 			},
 			"resultLimit": 5000
