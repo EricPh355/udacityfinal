@@ -1,0 +1,22 @@
+{
+	"name": "syndatalake",
+	"properties": {
+		"Name": "syndatalake",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://staging@strudacity.dfs.core.windows.net/syndatalake",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "synudacity-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
